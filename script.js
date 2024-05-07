@@ -39,6 +39,7 @@ button.addEventListener('click', async () => {
     function setPokeNum() {
         let getPokeNum = response.data.game_indices[0].game_index
         document.getElementById('pokemonNum').innerHTML = "#" + getPokeNum
+        
     }
 
     function setPokeType() {
@@ -50,8 +51,50 @@ button.addEventListener('click', async () => {
         console.log(getPokeTypes)        
         getPokeTypes.forEach(type  => {
             document.getElementById('pokemonType').innerHTML +=  type
-        }) 
+            
+        }
+
         
+        
+
+
+        
+    ) 
+      if (getPokeTypes[0] == ' fire') {
+        document.getElementById('card').style.backgroundColor = '#E57d71'
+      } else if(getPokeTypes[0] == ' water') {
+        document.getElementById('card').style.backgroundColor = '#71dfe5'
+      }else if(getPokeTypes[0] == ' grass') {
+        document.getElementById('card').style.backgroundColor = '#71e589'
+      }else if(getPokeTypes[0] == ' ghost') {
+        document.getElementById('card').style.backgroundColor = '#A788ec'
+      }else if(getPokeTypes[0] == ' fighting') {
+        document.getElementById('card').style.backgroundColor = '#E3905d'
+      }else if(getPokeTypes[0] == ' fairy') {
+        document.getElementById('card').style.backgroundColor = '#F49dce'
+      }else if(getPokeTypes[0] == ' steel') {
+        document.getElementById('card').style.backgroundColor = '#626972'
+      }else if(getPokeTypes[0] == ' ground') {
+        document.getElementById('card').style.backgroundColor = '#85521f'
+      }else if(getPokeTypes[0] == ' electric') {
+        document.getElementById('card').style.backgroundColor = '#Edf208'
+      }else if(getPokeTypes[0] == ' dragon') {
+        document.getElementById('card').style.backgroundColor = '#312cea'
+      }else if(getPokeTypes[0] == ' normal' && getPokeTypes[1] == ' flying') {
+        document.getElementById('card').style.backgroundColor = '#Adabe5'
+      }else if(getPokeTypes[0] == ' dark') {
+        document.getElementById('card').style.backgroundColor = '#100e49'
+      }else if(getPokeTypes[0] == ' rock') {
+        document.getElementById('card').style.backgroundColor = '#432104'
+      }else if(getPokeTypes[0] == ' psychic') {
+        document.getElementById('card').style.backgroundColor = '#93087d'
+      }else if(getPokeTypes[0] == ' poison') {
+        document.getElementById('card').style.backgroundColor = '#7029e3'
+      }else if(getPokeTypes[0] == ' bug') {
+        document.getElementById('card').style.backgroundColor = '#1ca120'
+      }else if(getPokeTypes[0] == ' ice') {
+        document.getElementById('card').style.backgroundColor = '#B0f1fa'
+      }
     }
     // function setPokeMoves () {
     //     let getPokeMoves = []
